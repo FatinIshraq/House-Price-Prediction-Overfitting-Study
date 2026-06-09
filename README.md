@@ -97,10 +97,13 @@ Input(19) → Dense(6,  tanh, L2=0.01)
 
 | Model | Train MAE | Val MAE | Train Loss | Val Loss |
 |-------|-----------|---------|------------|----------|
-| Basic MLP | — | — | — | — |
-| + Dropout | — | — | — | — |
-| + L2 | — | — | — | — |
+| Basic MLP | 39,121 | 85,618 | 2.86×10⁹ | 2.65×10¹⁰ |
+| MLP + Dropout | 72,424 | 78,537 | 1.28×10¹⁰ | 1.83×10¹⁰ |
+| MLP + L2 | 87,613 | 88,732 | 3.13×10¹⁰ | 3.52×10¹⁰ |
 
+**Key takeaway:** Basic MLP overfits severely — train MAE (39K) vs val MAE (85K) shows a 2× gap.
+Dropout closes this gap significantly (72K vs 78K), demonstrating better generalization on unseen data.
+L2 regularization produces the most stable train/val behavior but converges to a higher overall loss.
 
 ---
 
@@ -148,8 +151,9 @@ The notebook downloads the dataset automatically on first run.
 ## Roadmap
 
 - [x] Basic MLP baseline
-- [x] Dropout regularization
+- [x] Dropout regularization  
 - [x] L2 weight regularization
+- [x] Learning rate step decay scheduler
 - [ ] Early stopping integration
 - [ ] Batch normalization comparison
 - [ ] Feature importance analysis
