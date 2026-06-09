@@ -111,8 +111,7 @@ L2 regularization produces the most stable train/val behavior but converges to a
 
 ```
 House-Price-Prediction-Overfitting-Study/
-├── notebook/
-│   └── house_price_regression.ipynb   # EDA → preprocessing → 3 model comparison
+├── house_price_regression.ipynb   # EDA → preprocessing → 3 model comparison
 ├── results/
 │   ├── Basic MLP - Train vs Validation Loss.png            
 │   ├── MLP + Dropout - Train vs Validation Loss.png             
