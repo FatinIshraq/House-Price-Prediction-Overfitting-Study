@@ -158,9 +158,3 @@ The notebook downloads the dataset automatically on first run.
 - [ ] Feature importance analysis
 
 ---
-
-## Author
-
-**Fatin Ishraq** 
-
-[![GitHub](https://img.shields.io/badge/GitHub-FatinIshraq-black?logo=github)](https://github.com/FatinIshraq)
